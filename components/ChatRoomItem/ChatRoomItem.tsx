@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import styles from "./Styles";
 
-export default function ChatRoomItem({ chatRoom }) {
+export default function ChatRoomItem({ chatRoom}:any) {
 
   const user = chatRoom.users[1]
 
@@ -16,7 +16,7 @@ export default function ChatRoomItem({ chatRoom }) {
 
       <View style={styles.rightContainer}>
         <View style={styles.row}>
-          <Text style={styles.name}>Elon Musk</Text>
+          <Text style={styles.name}>{user.name}</Text>
           <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
         </View>
         <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>
